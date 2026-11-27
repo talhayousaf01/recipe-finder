@@ -36,6 +36,23 @@ async function searchMeals() {
     let response = await fetch(url);
     let data = await response.json();
 
-    console.log(data);
+   let meal = data.meals[0];
+
+let results = document.getElementById("results");
+
+results.innerHTML = `
+    <div class="col-12">
+        <h2>${meal.strMeal}</h2>
+
+        <img src="${meal.strMealThumb}" width="300"
+             class="img-fluid rounded mb-3">
+
+        <p>Category: ${meal.strCategory}</p>
+        <p>Cuisine: ${meal.strArea}</p>
+
+        <h4>Cooking Instructions</h4>
+        <p>${meal.strInstructions}</p>
+    </div>
+`;
 }
 
