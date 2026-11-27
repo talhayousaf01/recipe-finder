@@ -30,3 +30,12 @@ async function searchMeals() {
         `;
     }
 }
+    async function viewRecipe(id) {
+    let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
+
+    let response = await fetch(url);
+    let data = await response.json();
+
+    console.log(data);
+}
+
