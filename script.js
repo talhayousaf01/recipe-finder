@@ -58,7 +58,10 @@ results.innerHTML = `
 
         <p>Category: ${meal.strCategory}</p>
         <p>Cuisine: ${meal.strArea}</p>
-
+        <h4>Ingredients</h4>
+<ul>
+    ${ingredients}
+</ul>
         <h4>Cooking Instructions</h4>
         <p>${meal.strInstructions}</p>
     </div>
