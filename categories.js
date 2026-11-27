@@ -78,7 +78,7 @@ async function viewRecipe(id) {
         <div class="col-12">
             <h2>${meal.strMeal}</h2>
             <div class="col-12">
-    <button class="btn btn-secondary mb-3" onclick="location.reload()">
+    <button class="btn btn-success mb-3" onclick="location.reload()">
         Back to Categories
     </button>
 
