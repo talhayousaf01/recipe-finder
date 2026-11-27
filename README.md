@@ -1,2 +1,2 @@
-# recipe-finder
-a recipe finder website
+# recipe finder Final Project
+Recipe Finder is a website which I developed for my web development course. The main purpose of this website is to help users find different recipes of their choice. Users can search for a meal by entering the name of the meal and the website will display different recipes related to their search. There is also a categories page where users can browse different types of meals such as chicken, beef, seafood, dessert and many more. When a user clicks on the View Recipe button they can see the ingredients along with their measurements and the instructions on how to cook that particular meal. The website uses TheMealDB API from where all the information about the recipes is being fetched.
