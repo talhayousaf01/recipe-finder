@@ -77,6 +77,12 @@ async function viewRecipe(id) {
     categories.innerHTML = `
         <div class="col-12">
             <h2>${meal.strMeal}</h2>
+            <div class="col-12">
+    <button class="btn btn-secondary mb-3" onclick="location.reload()">
+        Back to Categories
+    </button>
+
+    <h2>${meal.strMeal}</h2>
             <img src="${meal.strMealThumb}" width="300" class="img-fluid rounded">
 
             <p>Category: ${meal.strCategory}</p>
