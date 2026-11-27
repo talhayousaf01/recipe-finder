@@ -58,6 +58,8 @@ async function viewCategory(category) {
     }
 }
 async function viewRecipe(id) {
+    document.getElementById("categoryTitle").style.display = "none";
+    document.getElementById("categorySubtitle").style.display = "none";
     let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
 
     let response = await fetch(url);
