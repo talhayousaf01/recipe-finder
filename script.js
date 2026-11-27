@@ -37,7 +37,16 @@ async function searchMeals() {
     let data = await response.json();
 
    let meal = data.meals[0];
+let ingredients = "";
 
+for (let i = 1; i <= 20; i++) {
+    let ingredient = meal["strIngredient" + i];
+    let measure = meal["strMeasure" + i];
+
+    if (ingredient && ingredient.trim() != "") {
+        ingredients += `<li>${measure || ""} ${ingredient}</li>`;
+    }
+}
 let results = document.getElementById("results");
 
 results.innerHTML = `
