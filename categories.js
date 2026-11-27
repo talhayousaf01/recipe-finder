@@ -79,7 +79,6 @@ async function viewRecipe(id) {
     }
 
     categories.innerHTML = `
-        <div class="col-12">
             <div class="col-12">
     <button class="btn btn-success mb-3" onclick="location.reload()">
         Back to Categories
