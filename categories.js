@@ -57,3 +57,36 @@ async function viewCategory(category) {
         `;
     }
 }
+async function viewRecipe(id) {
+    let url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
+
+    let response = await fetch(url);
+    let data = await response.json();
+
+    let meal = data.meals[0];
+    let categories = document.getElementById("categories");
+
+    let ingredients = "";
+
+    for (let i = 1; i <= 20; i++) {
+        if (meal["strIngredient" + i]) {
+            ingredients += `<li>${meal["strMeasure" + i]} ${meal["strIngredient" + i]}</li>`;
+        }
+    }
+
+    categories.innerHTML = `
+        <div class="col-12">
+            <h2>${meal.strMeal}</h2>
+            <img src="${meal.strMealThumb}" width="300" class="img-fluid rounded">
+
+            <p>Category: ${meal.strCategory}</p>
+            <p>Cuisine: ${meal.strArea}</p>
+
+            <h4>Ingredients</h4>
+            <ul>${ingredients}</ul>
+
+            <h4>Cooking Instructions</h4>
+            <p>${meal.strInstructions}</p>
+        </div>
+    `;
+}
