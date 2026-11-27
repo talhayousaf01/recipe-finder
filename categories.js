@@ -48,6 +48,9 @@ async function viewCategory(category) {
                     <img src="${meal.strMealThumb}" class="card-img-top">
                     <div class="card-body">
                         <h5>${meal.strMeal}</h5>
+                        <button class="btn btn-success" onclick="viewRecipe('${meal.idMeal}')">
+                         View Recipe
+                    </button>
                     </div>
                 </div>
             </div>
