@@ -27,6 +27,8 @@ async function loadCategories() {
 
 loadCategories();
 async function viewCategory(category) {
+    document.getElementById("categoryTitle").innerText = category + " Recipes";
+    document.getElementById("categorySubtitle").innerText = "Browse " + category + " recipes.";
     let url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + encodeURIComponent(category);
 
     let response = await fetch(url);
